@@ -1239,6 +1239,58 @@ section.gallery .container {
 
 /* End Evenets */
 
+/* Start Price */
+
+.pricing {
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+	position: relative;
+	background-color: var(--section-background-clr);
+}
+
+.pricing .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.8rem;
+}
+
+.pricing .box {
+	position: relative;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	transition: var(--main-transition);
+	background-color: white;
+	text-align: center;
+	z-index: 1;
+}
+
+.pricing .box::before,
+.pricing .box::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	background-color: lightgray;
+	height: 50%;
+	z-index: -1;
+	transition: var(--main-transition);
+}
+
+.pricing .box::before {
+	top: 0;
+	left: 0;
+}
+
+.pricing .box::after {
+	right: 0;
+	bottom: 0;
+}
+
+.pricing .box:hover::before,
+.pricing .box:hover::after {
+	width: 100%;
+}
+
+/* End Price */
+
 /* Start Animation */
 @keyframes up-and-down {
 
